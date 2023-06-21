@@ -23,3 +23,11 @@ npm run init # tsc --init
 # run specific test case
 npm run test -- -g 'hi2'
 ```
+
+func that calls a imported func 
+func that calls a func in the same module
+method that use private method
+method that use private properties
+method that initiate another class and use its properties and method
+
+How about aysnc call
