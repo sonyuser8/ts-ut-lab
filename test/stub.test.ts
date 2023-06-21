@@ -19,15 +19,16 @@ describe('Sinon lab', function(){
     })
     it('sinonTest1 - func that calls a imported standalone func', async function(){
         const st = sandbox.stub(util,'add')
-        st.returns(52)
+        st.returns(53)
+        st.withArgs(7,8).returns(77)
         sinonTest1()
     })
     it('sinonTest2 - func that calls a imported standalone async func', async function(){
-        const add = sandbox.stub(util,'addAsync'); // .callsFake((a:number,b:number)=>{ return new Promise()})
-        // add.callsFake(
+        const st = sandbox.stub(util,'addAsync'); // .callsFake((a:number,b:number)=>{ return new Promise()})
+        // st.callsFake(
         //     ()=>{ return new Promise((resolve)=>resolve(80)
         //         )});        
-        add.returns(new Promise((resolve)=>resolve(9487)));
+        st.returns(new Promise((resolve)=>resolve(9487)));
         sinonTest2()
     })
 })
