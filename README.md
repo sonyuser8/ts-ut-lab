@@ -3,7 +3,8 @@ My first commit
 
 # init the project
 ```bash
-npm init --y # gen package.json
+# gen package.json
+npm init --y 
 
 # install dependencies
 npm i sinon@15.1.2 -D
@@ -15,4 +16,10 @@ npm i @types/sinon@10.0.15 -D
 npm i @types/q@1.5.4 -D
 npm i @types/node@14.14.7 -D
 npm i @types/mocha@8.0.4 -D
+
+# gen tsconfig 
+npm run init # tsc --init
+
+# run specific test case
+npm run test -- -g 'hi2'
 ```

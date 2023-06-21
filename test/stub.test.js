@@ -36,11 +36,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var foobar_1 = require("../foobar");
 describe('Test1', function () {
-    it('misc', function () {
+    it('hi', function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 console.log('Hello');
+                foobar_1.foobar();
+                return [2 /*return*/];
+            });
+        });
+    });
+    it('hi2', function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                console.log('Hello2');
                 return [2 /*return*/];
             });
         });
