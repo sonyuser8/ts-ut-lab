@@ -18,7 +18,8 @@ describe('Sinon lab', function(){
 
     })
     it('sinonTest1 - func that calls a imported standalone func', async function(){
-        const add = sandbox.stub(util,'add').returns(50)
+        const st = sandbox.stub(util,'add')
+        st.returns(52)
         sinonTest1()
     })
     it('sinonTest2 - func that calls a imported standalone async func', async function(){
