@@ -34,10 +34,10 @@ describe('Sinon lab', function(){
     it('sinonTest3 - stub prototype', async function(){
         const st = sandbox.stub(ABC.prototype,'getAppName'); // .callsFake((a:number,b:number)=>{ return new Promise()})
         st.returns("QQ");
-        console.log('ABC.prototype:',typeof ABC.prototype)
-        console.log('ABC:',typeof ABC)
-        console.log('ABC.prototype.getAppName:',typeof ABC.prototype.getAppName)
-        console.log('ABC.prototype.getAppName.prototype:',typeof ABC.prototype.getAppName.prototype)
+        console.log('ABC.prototype:',typeof ABC.prototype) // object
+        console.log('ABC:',typeof ABC)                     // function
+        console.log('ABC.prototype.getAppName:',typeof ABC.prototype.getAppName)  // function
+        console.log('ABC.prototype.getAppName.prototype:',typeof ABC.prototype.getAppName.prototype) // object
         sinonTest3();
     })
 })
