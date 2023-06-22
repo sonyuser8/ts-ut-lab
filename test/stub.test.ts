@@ -38,6 +38,10 @@ describe('Sinon lab', function(){
         console.log('ABC:',typeof ABC)                     // function
         console.log('ABC.prototype.getAppName:',typeof ABC.prototype.getAppName)  // function
         console.log('ABC.prototype.getAppName.prototype:',typeof ABC.prototype.getAppName.prototype) // object
+        let a = { gg:'bb'}
+        let b = new ABC();
+        console.log('a instanceof ABC:', a instanceof ABC) // false
+        console.log('b instanceof ABC:', b instanceof ABC) // true
         sinonTest3();
     })
 })
