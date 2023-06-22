@@ -15,3 +15,15 @@ export async function sinonTest2(){
     console.log('ret:',ret);
     return ret;
 }
+
+export async function sinonTest3(){
+    let ret=new ABC().getAppName();
+    console.log('ret:',ret);
+    return ret;
+}
+
+export class ABC{
+    getAppName(){
+        return "paasportal"
+    }
+}

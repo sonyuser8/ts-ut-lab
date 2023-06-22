@@ -1,5 +1,5 @@
 import * as sinon from 'sinon';
-import { sinonTest1, sinonTest2 } from '../foobar';
+import { ABC, sinonTest1, sinonTest2, sinonTest3 } from '../foobar';
 import * as util from '../util';
 
 describe('Sinon lab', function(){
@@ -18,7 +18,7 @@ describe('Sinon lab', function(){
 
     })
     it('sinonTest1 - func that calls a imported standalone func', async function(){
-        const st = sandbox.stub(util,'add')
+        const st = sandbox.stub(util,'add')        
         st.returns(53)
         st.withArgs(7,8).returns(77)
         sinonTest1()
@@ -30,5 +30,10 @@ describe('Sinon lab', function(){
         //         )});        
         st.returns(new Promise((resolve)=>resolve(9487)));
         sinonTest2()
+    })
+    it('sinonTest3 - stub prototype', async function(){
+        const st = sandbox.stub(ABC.prototype,'getAppName'); // .callsFake((a:number,b:number)=>{ return new Promise()})
+        st.returns("QQ");
+        sinonTest3();
     })
 })
